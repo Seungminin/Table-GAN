@@ -1,4 +1,4 @@
-#Reference  
+# Reference  
 https://github.com/mahmoodm2/tableGAN/tree/master
 
 # table-GAN
