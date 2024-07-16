@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ksmin/Table-GAN/tableGAN/mlruns/1/ae0305ab2a7b4a45b0f1fa2d68bc902d/artifacts
+end_time: 1721115065048
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: ae0305ab2a7b4a45b0f1fa2d68bc902d
+run_uuid: ae0305ab2a7b4a45b0f1fa2d68bc902d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1721115047128
+status: 3
+tags: []
+user_id: ksmin

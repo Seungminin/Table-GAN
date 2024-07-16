@@ -371,7 +371,11 @@ def generate_data(sess, model, config, option):
 
             y = np.ones((config.batch_size, 1))
 
-            y[: int(zero_labeles * config.batch_size)] = 0
+            try:
+                 y[: int(zero_labeles * config.batch_size)] = 0
+            except ValueError as e:
+                print(f"Error occurred: {e}")
+                # Handle the error or log it
             np.random.shuffle(y)
 
             print("y shape " + str(y.shape))
@@ -402,7 +406,7 @@ def generate_data(sess, model, config, option):
         origin_data_path = model.train_data_path  # './data/'+ config.dataset+ '/train_'+ config.dataset + '_cleaned'
 
         if os.path.exists(origin_data_path + ".csv"):
-            origin_data = pd.read_csv(origin_data_path + ".csv", sep=';')
+            origin_data = pd.read_csv(origin_data_path + ".csv", sep=',')
 
         elif os.path.exists(origin_data_path + ".pickle"):
             with open(origin_data_path + '.pickle', 'rb') as handle:
@@ -429,7 +433,7 @@ def generate_data(sess, model, config, option):
 
         rsf_out = pd.DataFrame(round_scaled_fake)
 
-        rsf_out.to_csv(f'{save_dir}/{config.dataset}_{config.test_id}_fake.csv' , index=False, sep=';')
+        rsf_out.to_csv(f'{save_dir}/{config.dataset}_{config.test_id}_fake.csv' , index=False, sep=',')
 
         print("Generated Data shape = " + str(round_scaled_fake.shape))
 
