@@ -1,0 +1,4 @@
+artifact_location: file:///C:/Users/ksmin/Table-GAN/tableGAN/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: your_experiment_name

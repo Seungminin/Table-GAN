@@ -817,7 +817,7 @@ class TableGan(object):
 
         if os.path.exists(self.train_data_path + ".csv"):
 
-            X = pd.read_csv(self.train_data_path + ".csv", sep=';')
+            X = pd.read_csv(self.train_data_path + ".csv", sep=',')
             print("Loading CSV input file : %s" % (self.train_data_path + ".csv"))
 
             self.attrib_num = X.shape[1]

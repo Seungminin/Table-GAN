@@ -8,6 +8,7 @@ import os
 import datetime
 import tensorflow as tf
 import sys
+import mlflow
 
 from model import TableGan
 
@@ -154,9 +155,18 @@ def main(_):
 
         show_all_variables()
         
+        # Initialize MLflow experiment
+        mlflow.set_experiment("your_experiment_name")
+        mlflow.start_run()
+
+        # Log parameters
+        mlflow.log_param("epoch", FLAGS.epoch)
+        mlflow.log_param("learning_rate", FLAGS.learning_rate)
+        mlflow.log_param("beta1", FLAGS.beta1)
+
         #Train Part
         if FLAGS.train:
-            tablegan.train(FLAGS)
+            tablegan.train(config=FLAGS, experiment=mlflow)
 
         #Test Part
         else:
