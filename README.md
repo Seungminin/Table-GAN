@@ -1,3 +1,6 @@
+#Reference  
+https://github.com/mahmoodm2/tableGAN/tree/master
+
 # table-GAN
 **tableGAN** is the implementation of [Data Synthesis based on Generative Adversarial Networks](http://www.vldb.org/pvldb/vol11/p1071-park.pdf "tableGAN") paper. It is a synthetic data generation technique which has been implemented using a deep learning model based on **Generative Adversarial Network (GAN)** architecture. The goal of this technique is to protect sensitive data against re-identification attacks by producing synthetic data out of real data while preserving statistical features. 
 
